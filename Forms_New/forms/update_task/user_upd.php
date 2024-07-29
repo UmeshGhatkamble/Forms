@@ -1,0 +1,25 @@
+<?php 
+  include("config.php");
+  if($_SERVER['REQUEST_METHOD']=='POST');
+  {
+
+    $a= $_POST['username'];
+   
+    $b= $_POST['email'];
+   
+  
+
+  $qry=mysql_query("UPDATE user_info SET u_email='$b' WHERE u_username='$a'");
+
+  if($qry==true)
+   {
+    echo "updated";
+   }
+   else{
+
+    echo"not".mysql_error();
+   }
+}
+ 
+   
+   ?>
